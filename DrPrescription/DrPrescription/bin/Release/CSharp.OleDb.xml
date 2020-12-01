@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharp.OleDb</name>
+    </assembly>
+    <members>
+        <member name="T:CSharp.OleDb.OleDbHelper">
+            <summary>
+            OleDbHelper
+            </summary>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="connectionString">a valid connection string for a MySqlConnection</param>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.PackingParameters(CSharp.OleDb.Parameter,System.Data.OleDb.OleDbCommand)">
+            <summary>
+            Packing parameters
+            </summary>
+            <param name="parameters">array of OleDbParamters</param>
+            <param name="cmd">OleDbCommand object</param>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.GetParameter(System.String,System.Object,System.Data.OleDb.OleDbCommand)">
+            <summary>
+            Packing parameter object
+            </summary>
+            <param name="paramName">parameter name</param>
+            <param name="paramValue">parameter value</param>
+            <param name="cmd">OleDbCommand object</param>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteConnect(System.String)">
+            <summary>
+            DataBase connection
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteConnect">
+            <summary>
+            DataBase connection
+            </summary>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteNonQuery(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand (that returns no resultset) against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteNonQuery(System.String,System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand (that returns no resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteNonQuery(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand (that returns no resultset) against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteNonQuery(System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand (that returns no resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteScalar(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns the first column of the first record against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteScalar(System.String,System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns the first column of the first record against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteScalar(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns the first column of the first record against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteScalar(System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns the first column of the first record against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteReader(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A OleDbDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteReader(System.String,System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A OleDbDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteReader(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A OleDbDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.ExecuteReader(System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a OleDbCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A OleDbDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataTable(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataTable(System.String,System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataTable(System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataSet(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataSet(System.String,System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.FillDataSet(System.String,CSharp.OleDb.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.GetSchemaTable(System.String)">
+            <summary>
+            Returns all tables in the database
+            </summary>
+            <param name="connectionString">a valid connection string for a OleDbConnection</param>
+            <returns>All tables in the database</returns>
+        </member>
+        <member name="M:CSharp.OleDb.OleDbHelper.GetSchemaTable">
+            <summary>
+            Returns all tables in the database
+            </summary>
+            <returns>All tables in the database</returns>
+        </member>
+        <member name="T:CSharp.OleDb.Parameter">
+            <summary>
+            Sql Parameter
+            </summary>
+        </member>
+    </members>
+</doc>
